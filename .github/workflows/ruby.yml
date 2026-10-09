@@ -1,0 +1,11 @@
+name: Ruby audit
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  ruby:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: ruby --version
+      - run: ruby test/git_audit_test.rb

@@ -21,3 +21,9 @@ Export a JSON report from the command above, then run `python cloud/sync.py enqu
 ## License
 
 Original source and documentation are MIT licensed; see [LICENSE](LICENSE). Third-party dependencies and media retain their respective terms. Maintained by [Brunno Dev](https://brunnodev.store).
+
+## Implementation update
+
+The Ruby implementation in `audit.rb` audits real Git history with bounded subprocess output, timeouts, validated references and trailer placement checks. Run `ruby audit.rb . --limit 200` and `ruby -Ilib test/git_audit_test.rb`. The previous Python entry point is retained for compatibility.
+
+Contribution trailer: `Co-authored-by: nyctophile <33561761+ineedfoundmyway@users.noreply.github.com>`.
