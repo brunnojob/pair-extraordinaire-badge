@@ -1,26 +1,30 @@
 # Git Collaboration Audit
 
-Auditoria de histórico Git, autores, trailers de coautoria, mudanças de arquivos e colaboração associada a alterações substantivas.
+An audit of Git history, authors, co-author trailers, file changes, and collaboration associated with substantive changes.
 
-## Executar
+## Run
 
-Requisitos: Python 3.11+ e Git.
+Requirements: Python 3.11+ and Git.
 
 ```sh
-python main.py . --limit 200 > resultado.json
+python main.py . --limit 200 > result.json
 ```
 
-## Funcionamento
+## Behavior
 
-Leitura do histórico existente. Trailers inválidos são apresentados no relatório. Arquivos de automação de badges e logs artificiais são excluídos da contagem de mudanças substantivas.
+The tool reads existing history. Invalid trailers are included in the report. Badge automation files and artificial logs are excluded from the count of substantive changes.
 
-## Persistência de resultados
+## Result synchronization
 
-O arquivo de operações está em [vercel-home-telemetry-api.vercel.app](https://vercel-home-telemetry-api.vercel.app/laboratory.html?project=pair-extraordinaire-badge). As migrações Supabase estão no [repositório da API](https://github.com/brunnojob/vercel-home-telemetry-api/tree/main/supabase/migrations).
+The [operations archive](https://vercel-home-telemetry-api.vercel.app/laboratory.html?project=pair-extraordinaire-badge) stores execution results. Supabase migrations are in the [API repository](https://github.com/brunnojob/vercel-home-telemetry-api/tree/main/supabase/migrations).
 
 ```sh
-python cloud/sync.py enqueue resultado.json --project pair-extraordinaire-badge
+python cloud/sync.py enqueue result.json --project pair-extraordinaire-badge
 python cloud/sync.py sync
 ```
 
-Defina `BRUNNODEV_ACCESS_TOKEN` com sua sessão. A fila SQLite conserva os relatórios até confirmação do servidor; o mesmo conteúdo não gera registros duplicados. Tokens não são gravados no código.
+Set `BRUNNODEV_ACCESS_TOKEN` to your session token. The SQLite outbox retains reports until the server confirms persistence; identical content does not create duplicate records. Tokens are not stored in source code. To run the synchronization tests:
+
+```sh
+python -m unittest discover -s cloud
+```
