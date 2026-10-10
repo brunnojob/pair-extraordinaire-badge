@@ -10,13 +10,13 @@ $ bash -e -o pipefail -c python main.py . --limit 10
   },
   "commits": [
     {
-      "sha": "7950bba10ab2efa540d8b77c27b14d27f46157e0",
+      "sha": "530e6c9babf5ecca585f50fb3741fbac85c74788",
       "author": {
         "name": "brunnodev",
         "email": "contato@brunnodev.store"
       },
-      "timestamp": "2026-10-09T23:34:44-03:00",
-      "subject": "test: publish reproducible execution scenarios and strengthen input validation",
+      "timestamp": "2026-10-09T23:42:49-03:00",
+      "subject": "fix: harden proof capture and publish verified execution records",
       "coAuthors": [
         {
           "name": "nyctophile",
@@ -47,7 +47,7 @@ $ bash -e -o pipefail -c python main.py . --limit 10
         },
         {
           "path": ".proof/record.py",
-          "added": 138,
+          "added": 151,
           "removed": 0
         },
         {
@@ -67,7 +67,7 @@ $ bash -e -o pipefail -c python main.py . --limit 10
         },
         {
           "path": "README.md",
-          "added": 37,
+          "added": 39,
           "removed": 0
         },
         {
@@ -91,6 +91,21 @@ $ bash -e -o pipefail -c python main.py . --limit 10
           "removed": 0
         },
         {
+          "path": "docs/proof/evidence.json",
+          "added": 66,
+          "removed": 0
+        },
+        {
+          "path": "docs/proof/execution.svg",
+          "added": 51,
+          "removed": 0
+        },
+        {
+          "path": "docs/proof/transcript.txt",
+          "added": 238,
+          "removed": 0
+        },
+        {
           "path": "lib/git_audit.rb",
           "added": 86,
           "removed": 0
@@ -106,7 +121,7 @@ $ bash -e -o pipefail -c python main.py . --limit 10
           "removed": 0
         }
       ],
-      "substantiveFiles": 16
+      "substantiveFiles": 19
     }
   ]
 }
@@ -120,7 +135,7 @@ test_conflicting_key_cannot_overwrite_a_report (test_sync.OutboxTests.test_confl
 test_retries_keep_reports_until_confirmed (test_sync.OutboxTests.test_retries_keep_reports_until_confirmed) ... ok
 
 ----------------------------------------------------------------------
-Ran 6 tests in 0.072s
+Ran 6 tests in 0.061s
 
 OK
 
@@ -136,13 +151,13 @@ $ python main.py . --limit 20
   },
   "commits": [
     {
-      "sha": "7950bba10ab2efa540d8b77c27b14d27f46157e0",
+      "sha": "530e6c9babf5ecca585f50fb3741fbac85c74788",
       "author": {
         "name": "brunnodev",
         "email": "contato@brunnodev.store"
       },
-      "timestamp": "2026-10-09T23:34:44-03:00",
-      "subject": "test: publish reproducible execution scenarios and strengthen input validation",
+      "timestamp": "2026-10-09T23:42:49-03:00",
+      "subject": "fix: harden proof capture and publish verified execution records",
       "coAuthors": [
         {
           "name": "nyctophile",
@@ -173,7 +188,7 @@ $ python main.py . --limit 20
         },
         {
           "path": ".proof/record.py",
-          "added": 138,
+          "added": 151,
           "removed": 0
         },
         {
@@ -193,7 +208,7 @@ $ python main.py . --limit 20
         },
         {
           "path": "README.md",
-          "added": 37,
+          "added": 39,
           "removed": 0
         },
         {
@@ -217,6 +232,21 @@ $ python main.py . --limit 20
           "removed": 0
         },
         {
+          "path": "docs/proof/evidence.json",
+          "added": 66,
+          "removed": 0
+        },
+        {
+          "path": "docs/proof/execution.svg",
+          "added": 51,
+          "removed": 0
+        },
+        {
+          "path": "docs/proof/transcript.txt",
+          "added": 238,
+          "removed": 0
+        },
+        {
           "path": "lib/git_audit.rb",
           "added": 86,
           "removed": 0
@@ -232,7 +262,7 @@ $ python main.py . --limit 20
           "removed": 0
         }
       ],
-      "substantiveFiles": 16
+      "substantiveFiles": 19
     }
   ]
 }
