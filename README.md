@@ -26,4 +26,12 @@ Original source and documentation are MIT licensed; see [LICENSE](LICENSE). Thir
 
 The Ruby implementation in `audit.rb` audits real Git history with bounded subprocess output, timeouts, validated references and trailer placement checks. Run `ruby audit.rb . --limit 200` and `ruby -Ilib test/git_audit_test.rb`. The previous Python entry point is retained for compatibility.
 
-Contribution trailer: `Co-authored-by: nyctophile <33561761+ineedfoundmyway@users.noreply.github.com>`.
+Contribution trailer: `Co-authored-by: nyctophile <329826984+ineedfoundmyway@users.noreply.github.com>`.
+
+## Execution proof
+
+[![Executable proof](https://github.com/brunnojob/pair-extraordinaire-badge/actions/workflows/proof.yml/badge.svg)](https://github.com/brunnojob/pair-extraordinaire-badge/actions/workflows/proof.yml)
+
+[Recorded execution and downloadable evidence](https://github.com/brunnojob/pair-extraordinaire-badge/actions/workflows/proof.yml)
+
+Run `python .proof/record.py` after installing the prerequisites above. The scenarios execute repository code and verify exit codes and expected output. CI publishes `execution-proof` with the transcript, input fingerprints and source commit. The downloadable report identifies the exact tested version; the workflow badge tracks the latest run.

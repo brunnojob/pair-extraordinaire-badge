@@ -1,0 +1,48 @@
+{
+  "repository": "brunnojob/pair-extraordinaire-badge",
+  "inputs": [
+    ".proof/scenarios.json"
+  ],
+  "cases": [
+    {
+      "name": "python main.py . --limit 10",
+      "argv": [
+        "bash",
+        "-e",
+        "-o",
+        "pipefail",
+        "-c",
+        "python main.py . --limit 10"
+      ],
+      "timeout": 900,
+      "display": true
+    },
+    {
+      "name": "python -m unittest discover -v -s cloud",
+      "argv": [
+        "bash",
+        "-e",
+        "-o",
+        "pipefail",
+        "-c",
+        "python -m unittest discover -v -s cloud"
+      ],
+      "timeout": 900,
+      "display": true
+    },
+    {
+      "name": "Audit this real repository history",
+      "argv": [
+        "python",
+        "main.py",
+        ".",
+        "--limit",
+        "20"
+      ],
+      "contains": [
+        "{"
+      ],
+      "timeout": 120
+    }
+  ]
+}
