@@ -1,0 +1,238 @@
+$ bash -e -o pipefail -c python main.py . --limit 10
+{
+  "repository": "/home/runner/work/pair-extraordinaire-badge/pair-extraordinaire-badge",
+  "ref": "HEAD",
+  "inspected": 1,
+  "collaborativeCommits": 1,
+  "malformedTrailers": 0,
+  "coAuthorCounts": {
+    "329826984+ineedfoundmyway@users.noreply.github.com": 1
+  },
+  "commits": [
+    {
+      "sha": "7950bba10ab2efa540d8b77c27b14d27f46157e0",
+      "author": {
+        "name": "brunnodev",
+        "email": "contato@brunnodev.store"
+      },
+      "timestamp": "2026-10-09T23:34:44-03:00",
+      "subject": "test: publish reproducible execution scenarios and strengthen input validation",
+      "coAuthors": [
+        {
+          "name": "nyctophile",
+          "email": "329826984+ineedfoundmyway@users.noreply.github.com"
+        }
+      ],
+      "invalidTrailers": [],
+      "changes": [
+        {
+          "path": ".github/workflows/proof.yml",
+          "added": 38,
+          "removed": 0
+        },
+        {
+          "path": ".github/workflows/ruby.yml",
+          "added": 11,
+          "removed": 0
+        },
+        {
+          "path": ".github/workflows/verify.yml",
+          "added": 18,
+          "removed": 0
+        },
+        {
+          "path": ".gitignore",
+          "added": 31,
+          "removed": 0
+        },
+        {
+          "path": ".proof/record.py",
+          "added": 138,
+          "removed": 0
+        },
+        {
+          "path": ".proof/scenarios.json",
+          "added": 48,
+          "removed": 0
+        },
+        {
+          "path": ".proof/summary.py",
+          "added": 14,
+          "removed": 0
+        },
+        {
+          "path": "LICENSE",
+          "added": 21,
+          "removed": 0
+        },
+        {
+          "path": "README.md",
+          "added": 37,
+          "removed": 0
+        },
+        {
+          "path": "audit.rb",
+          "added": 17,
+          "removed": 0
+        },
+        {
+          "path": "cloud/sync.py",
+          "added": 204,
+          "removed": 0
+        },
+        {
+          "path": "cloud/test_receipts.py",
+          "added": 73,
+          "removed": 0
+        },
+        {
+          "path": "cloud/test_sync.py",
+          "added": 37,
+          "removed": 0
+        },
+        {
+          "path": "lib/git_audit.rb",
+          "added": 86,
+          "removed": 0
+        },
+        {
+          "path": "main.py",
+          "added": 111,
+          "removed": 0
+        },
+        {
+          "path": "test/git_audit_test.rb",
+          "added": 24,
+          "removed": 0
+        }
+      ],
+      "substantiveFiles": 16
+    }
+  ]
+}
+
+$ bash -e -o pipefail -c python -m unittest discover -v -s cloud
+test_confirmed_receipt_marks_the_report_sent (test_receipts.ReceiptTests.test_confirmed_receipt_marks_the_report_sent) ... ok
+test_events_reject_empty_values_of_the_wrong_type (test_receipts.ReceiptTests.test_events_reject_empty_values_of_the_wrong_type) ... ok
+test_invalid_receipts_keep_the_report_pending (test_receipts.ReceiptTests.test_invalid_receipts_keep_the_report_pending) ... ok
+test_omitted_events_and_empty_list_have_the_same_key (test_receipts.ReceiptTests.test_omitted_events_and_empty_list_have_the_same_key) ... ok
+test_conflicting_key_cannot_overwrite_a_report (test_sync.OutboxTests.test_conflicting_key_cannot_overwrite_a_report) ... ok
+test_retries_keep_reports_until_confirmed (test_sync.OutboxTests.test_retries_keep_reports_until_confirmed) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.072s
+
+OK
+
+$ python main.py . --limit 20
+{
+  "repository": "/home/runner/work/pair-extraordinaire-badge/pair-extraordinaire-badge",
+  "ref": "HEAD",
+  "inspected": 1,
+  "collaborativeCommits": 1,
+  "malformedTrailers": 0,
+  "coAuthorCounts": {
+    "329826984+ineedfoundmyway@users.noreply.github.com": 1
+  },
+  "commits": [
+    {
+      "sha": "7950bba10ab2efa540d8b77c27b14d27f46157e0",
+      "author": {
+        "name": "brunnodev",
+        "email": "contato@brunnodev.store"
+      },
+      "timestamp": "2026-10-09T23:34:44-03:00",
+      "subject": "test: publish reproducible execution scenarios and strengthen input validation",
+      "coAuthors": [
+        {
+          "name": "nyctophile",
+          "email": "329826984+ineedfoundmyway@users.noreply.github.com"
+        }
+      ],
+      "invalidTrailers": [],
+      "changes": [
+        {
+          "path": ".github/workflows/proof.yml",
+          "added": 38,
+          "removed": 0
+        },
+        {
+          "path": ".github/workflows/ruby.yml",
+          "added": 11,
+          "removed": 0
+        },
+        {
+          "path": ".github/workflows/verify.yml",
+          "added": 18,
+          "removed": 0
+        },
+        {
+          "path": ".gitignore",
+          "added": 31,
+          "removed": 0
+        },
+        {
+          "path": ".proof/record.py",
+          "added": 138,
+          "removed": 0
+        },
+        {
+          "path": ".proof/scenarios.json",
+          "added": 48,
+          "removed": 0
+        },
+        {
+          "path": ".proof/summary.py",
+          "added": 14,
+          "removed": 0
+        },
+        {
+          "path": "LICENSE",
+          "added": 21,
+          "removed": 0
+        },
+        {
+          "path": "README.md",
+          "added": 37,
+          "removed": 0
+        },
+        {
+          "path": "audit.rb",
+          "added": 17,
+          "removed": 0
+        },
+        {
+          "path": "cloud/sync.py",
+          "added": 204,
+          "removed": 0
+        },
+        {
+          "path": "cloud/test_receipts.py",
+          "added": 73,
+          "removed": 0
+        },
+        {
+          "path": "cloud/test_sync.py",
+          "added": 37,
+          "removed": 0
+        },
+        {
+          "path": "lib/git_audit.rb",
+          "added": 86,
+          "removed": 0
+        },
+        {
+          "path": "main.py",
+          "added": 111,
+          "removed": 0
+        },
+        {
+          "path": "test/git_audit_test.rb",
+          "added": 24,
+          "removed": 0
+        }
+      ],
+      "substantiveFiles": 16
+    }
+  ]
+}

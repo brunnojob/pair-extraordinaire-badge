@@ -1,0 +1,66 @@
+{
+  "schema": 1,
+  "repository": "brunnojob/pair-extraordinaire-badge",
+  "source_commit": "7950bba10ab2efa540d8b77c27b14d27f46157e0",
+  "generated_at": "2026-10-10T02:34:53.108311+00:00",
+  "run_url": "https://github.com/brunnojob/pair-extraordinaire-badge/actions/runs/38017481790",
+  "inputs_sha256": {
+    ".proof/scenarios.json": "3ebd2787ae98103b26d98f1ca070d724d6de7151c5cb67744eabbba391707307"
+  },
+  "cases": [
+    {
+      "display": true,
+      "name": "python main.py . --limit 10",
+      "argv": [
+        "bash",
+        "-e",
+        "-o",
+        "pipefail",
+        "-c",
+        "python main.py . --limit 10"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "seconds": 0.051,
+      "output": "{\n  \"repository\": \"/home/runner/work/pair-extraordinaire-badge/pair-extraordinaire-badge\",\n  \"ref\": \"HEAD\",\n  \"inspected\": 1,\n  \"collaborativeCommits\": 1,\n  \"malformedTrailers\": 0,\n  \"coAuthorCounts\": {\n    \"329826984+ineedfoundmyway@users.noreply.github.com\": 1\n  },\n  \"commits\": [\n    {\n      \"sha\": \"7950bba10ab2efa540d8b77c27b14d27f46157e0\",\n      \"author\": {\n        \"name\": \"brunnodev\",\n        \"email\": \"contato@brunnodev.store\"\n      },\n      \"timestamp\": \"2026-10-09T23:34:44-03:00\",\n      \"subject\": \"test: publish reproducible execution scenarios and strengthen input validation\",\n      \"coAuthors\": [\n        {\n          \"name\": \"nyctophile\",\n          \"email\": \"329826984+ineedfoundmyway@users.noreply.github.com\"\n        }\n      ],\n      \"invalidTrailers\": [],\n      \"changes\": [\n        {\n          \"path\": \".github/workflows/proof.yml\",\n          \"added\": 38,\n          \"removed\": 0\n        },\n        {\n          \"path\": \".github/workflows/ruby.yml\",\n          \"added\": 11,\n          \"removed\": 0\n        },\n        {\n          \"path\": \".github/workflows/verify.yml\",\n          \"added\": 18,\n          \"removed\": 0\n        },\n        {\n          \"path\": \".gitignore\",\n          \"added\": 31,\n          \"removed\": 0\n        },\n        {\n          \"path\": \".proof/record.py\",\n          \"added\": 138,\n          \"removed\": 0\n        },\n        {\n          \"path\": \".proof/scenarios.json\",\n          \"added\": 48,\n          \"removed\": 0\n        },\n        {\n          \"path\": \".proof/summary.py\",\n          \"added\": 14,\n          \"removed\": 0\n        },\n        {\n          \"path\": \"LICENSE\",\n          \"added\": 21,\n          \"removed\": 0\n        },\n        {\n          \"path\": \"README.md\",\n          \"added\": 37,\n          \"removed\": 0\n        },\n        {\n          \"path\": \"audit.rb\",\n          \"added\": 17,\n          \"removed\": 0\n        },\n        {\n          \"path\": \"cloud/sync.py\",\n          \"added\": 204,\n          \"removed\": 0\n        },\n        {\n          \"path\": \"cloud/test_receipts.py\",\n          \"added\": 73,\n          \"removed\": 0\n        },\n        {\n          \"path\": \"cloud/test_sync.py\",\n          \"added\": 37,\n          \"removed\": 0\n        },\n        {\n          \"path\": \"lib/git_audit.rb\",\n          \"added\": 86,\n          \"removed\": 0\n        },\n        {\n          \"path\": \"main.py\",\n          \"added\": 111,\n          \"removed\": 0\n        },\n        {\n          \"path\": \"test/git_audit_test.rb\",\n          \"added\": 24,\n          \"removed\": 0\n        }\n      ],\n      \"substantiveFiles\": 16\n    }\n  ]\n}\n",
+      "output_sha256": "cacc3ddb5b341c621d9e7a30de901be5524a0d3a278bec5373debe3ca6963e64"
+    },
+    {
+      "display": true,
+      "name": "python -m unittest discover -v -s cloud",
+      "argv": [
+        "bash",
+        "-e",
+        "-o",
+        "pipefail",
+        "-c",
+        "python -m unittest discover -v -s cloud"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "seconds": 0.402,
+      "output": "test_confirmed_receipt_marks_the_report_sent (test_receipts.ReceiptTests.test_confirmed_receipt_marks_the_report_sent) ... ok\ntest_events_reject_empty_values_of_the_wrong_type (test_receipts.ReceiptTests.test_events_reject_empty_values_of_the_wrong_type) ... ok\ntest_invalid_receipts_keep_the_report_pending (test_receipts.ReceiptTests.test_invalid_receipts_keep_the_report_pending) ... ok\ntest_omitted_events_and_empty_list_have_the_same_key (test_receipts.ReceiptTests.test_omitted_events_and_empty_list_have_the_same_key) ... ok\ntest_conflicting_key_cannot_overwrite_a_report (test_sync.OutboxTests.test_conflicting_key_cannot_overwrite_a_report) ... ok\ntest_retries_keep_reports_until_confirmed (test_sync.OutboxTests.test_retries_keep_reports_until_confirmed) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.072s\n\nOK\n",
+      "output_sha256": "bb51877f0481ec69181f34ad96ae08a24134aa65770d4b3935a59eb706814bf0"
+    },
+    {
+      "display": true,
+      "name": "Audit this real repository history",
+      "argv": [
+        "python",
+        "main.py",
+        ".",
+        "--limit",
+        "20"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "seconds": 0.051,
+      "output": "{\n  \"repository\": \"/home/runner/work/pair-extraordinaire-badge/pair-extraordinaire-badge\",\n  \"ref\": \"HEAD\",\n  \"inspected\": 1,\n  \"collaborativeCommits\": 1,\n  \"malformedTrailers\": 0,\n  \"coAuthorCounts\": {\n    \"329826984+ineedfoundmyway@users.noreply.github.com\": 1\n  },\n  \"commits\": [\n    {\n      \"sha\": \"7950bba10ab2efa540d8b77c27b14d27f46157e0\",\n      \"author\": {\n        \"name\": \"brunnodev\",\n        \"email\": \"contato@brunnodev.store\"\n      },\n      \"timestamp\": \"2026-10-09T23:34:44-03:00\",\n      \"subject\": \"test: publish reproducible execution scenarios and strengthen input validation\",\n      \"coAuthors\": [\n        {\n          \"name\": \"nyctophile\",\n          \"email\": \"329826984+ineedfoundmyway@users.noreply.github.com\"\n        }\n      ],\n      \"invalidTrailers\": [],\n      \"changes\": [\n        {\n          \"path\": \".github/workflows/proof.yml\",\n          \"added\": 38,\n          \"removed\": 0\n        },\n        {\n          \"path\": \".github/workflows/ruby.yml\",\n          \"added\": 11,\n          \"removed\": 0\n        },\n        {\n          \"path\": \".github/workflows/verify.yml\",\n          \"added\": 18,\n          \"removed\": 0\n        },\n        {\n          \"path\": \".gitignore\",\n          \"added\": 31,\n          \"removed\": 0\n        },\n        {\n          \"path\": \".proof/record.py\",\n          \"added\": 138,\n          \"removed\": 0\n        },\n        {\n          \"path\": \".proof/scenarios.json\",\n          \"added\": 48,\n          \"removed\": 0\n        },\n        {\n          \"path\": \".proof/summary.py\",\n          \"added\": 14,\n          \"removed\": 0\n        },\n        {\n          \"path\": \"LICENSE\",\n          \"added\": 21,\n          \"removed\": 0\n        },\n        {\n          \"path\": \"README.md\",\n          \"added\": 37,\n          \"removed\": 0\n        },\n        {\n          \"path\": \"audit.rb\",\n          \"added\": 17,\n          \"removed\": 0\n        },\n        {\n          \"path\": \"cloud/sync.py\",\n          \"added\": 204,\n          \"removed\": 0\n        },\n        {\n          \"path\": \"cloud/test_receipts.py\",\n          \"added\": 73,\n          \"removed\": 0\n        },\n        {\n          \"path\": \"cloud/test_sync.py\",\n          \"added\": 37,\n          \"removed\": 0\n        },\n        {\n          \"path\": \"lib/git_audit.rb\",\n          \"added\": 86,\n          \"removed\": 0\n        },\n        {\n          \"path\": \"main.py\",\n          \"added\": 111,\n          \"removed\": 0\n        },\n        {\n          \"path\": \"test/git_audit_test.rb\",\n          \"added\": 24,\n          \"removed\": 0\n        }\n      ],\n      \"substantiveFiles\": 16\n    }\n  ]\n}\n",
+      "output_sha256": "cacc3ddb5b341c621d9e7a30de901be5524a0d3a278bec5373debe3ca6963e64"
+    }
+  ],
+  "passed": true
+}
