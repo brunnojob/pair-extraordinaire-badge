@@ -1,5 +1,7 @@
 # Git Collaboration Audit
 
+[View execution evidence](https://brunnojob.github.io/devstart-lab/proofs/pair-extraordinaire-badge/)
+
 An audit of Git history, authors, co-author trailers, file changes, and collaboration associated with substantive changes.
 
 ## Run
